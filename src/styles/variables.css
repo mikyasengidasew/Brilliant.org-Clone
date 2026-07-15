@@ -1,0 +1,94 @@
+/* ============================================
+   PRIMITIVE COLOR TOKENS
+   ============================================ */
+:root {
+  /* Neutrals */
+  --color-white: #ffffff;
+  --color-white-50: rgba(255, 255, 255, 0.5); /* #FFFFFF80 */
+  --color-white-30: rgba(255, 255, 255, 0.3); /* #FFFFFF4d */
+
+  --color-black: #000000;
+  --color-black-60: rgba(0, 0, 0, 0.6); /* #00000099 */
+  --color-black-40: rgba(0, 0, 0, 0.4); /* #00000066 */
+  --color-black-30: rgba(0, 0, 0, 0.3); /* #0000004d */
+  --color-black-20: rgba(0, 0, 0, 0.2); /* #00000033 */
+  --color-black-10: rgba(0, 0, 0, 0.1); /* #0000001a */
+  --color-black-27: rgba(0, 0, 0, 0.27); /* #00000044 */
+
+  --color-gray-100: #e4e4e4;
+  --color-gray-200: #999999;
+  --color-gray-300: #808080;
+  --color-gray-400: #767676;
+  --color-gray-500: #656565;
+  --color-gray-600: #545454;
+  --color-gray-700: #1c1c1c;
+
+  /* Accents / Brand */
+  --color-green: #29cc57;
+  --color-green-light: #e7eee2;
+  --color-yellow: #fcfa77;
+  --color-pink: #ffe0e0;
+  --color-blue-light: #f0f8fa;
+  --color-warm-gray: #f5f3f1;
+}
+
+/* ============================================
+   SEMANTIC TOKENS
+   ============================================ */
+:root {
+  /* ---------- Backgrounds ---------- */
+  --bg-body: var(--color-white);
+  --bg-surface: var(--color-blue-light);
+  --bg-surface-alt: var(--color-warm-gray);
+  --bg-accent-pink: var(--color-pink);
+  --bg-accent-green-light: var(--color-green-light);
+  --bg-primary: var(--color-green);
+  --bg-dark: var(--color-gray-700);
+  --bg-black: var(--color-black);
+  --bg-overlay: var(--color-black-20);
+
+  /* ---------- Text ---------- */
+  --text-primary: var(--color-gray-700); /* main body text */
+  --text-secondary: var(--color-gray-500); /* less prominent */
+  --text-muted: var(--color-gray-200); /* subtle hints */
+  --text-on-dark: var(--color-white);
+  --text-on-dark-muted: var(--color-white-50);
+  --text-black: var(--color-black);
+  --text-muted-40: var(--color-black-40); /* low emphasis */
+  --text-muted-27: var(--color-black-27);
+  --text-muted-60: var(--color-black-60);
+
+  /* ---------- Borders ---------- */
+  --border-light: var(--color-gray-100);
+  --border-medium: var(--color-gray-400);
+  --border-dark: var(--color-gray-600);
+  --border-primary: var(--color-green);
+  --border-white-30: var(--color-white-30);
+  --border-black-10: var(--color-black-10);
+  --border-black-40: var(--color-black-40);
+
+  /* ---------- Fills (icons, badges, etc.) ---------- */
+  --fill-white-50: var(--color-white-50);
+  --fill-white: var(--color-white);
+  --fill-yellow: var(--color-yellow);
+  --fill-gray: var(--color-gray-200);
+  --fill-gray-dark: var(--color-gray-300);
+  --fill-black: var(--color-black);
+  --fill-black-30: var(--color-black-30);
+}
+
+/* ============================================
+   COMPONENT‑SPECIFIC TOKENS 
+   ============================================ */
+:root {
+  --button-bg: var(--bg-primary);
+  --button-text: var(--text-on-dark);
+  --card-bg: var(--bg-surface);
+  --card-border: var(--border-light);
+  --section-title: var(--text-primary);
+  --section-subtitle: var(--text-secondary);
+  --hero-cta-bg: var(--bg-primary);
+  --hero-cta-text: var(--text-on-dark);
+  --footer-bg: var(--bg-dark);
+  --footer-text: var(--text-on-dark-muted);
+}
