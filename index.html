@@ -62,8 +62,142 @@
     <meta name="color-scheme" content="light" />
 
     <link rel="stylesheet" href="./src/styles/styles.css" />
+    <style>
+      .skip-link {
+        position: absolute;
+        top: -60px;
+        left: 0px;
+        z-index: 10000;
+        background-color: #000;
+        color: #fff;
+        padding: 10px 20px;
+        border-radius: 0 0 4px 0;
+        text-align: center;
+        text-decoration: none;
+        font-weight: 600;
+        transition: top 0.2s ease-in-out;
+      }
+
+      .skip-link:focus {
+        top: 0;
+        outline: 2px solid #fff;
+        outline-offset: 2px;
+      }
+
+      .number-heading {
+        position: absolute !important;
+        width: 1px !important;
+        height: 1px !important;
+        padding: 0 !important;
+        margin: -1px !important;
+        overflow: hidden !important;
+        clip: rect(0, 0, 0, 0) !important;
+        border: 0 !important;
+        /* Prevents text from breaking layouts */
+        white-space: nowrap !important;
+      }
+    </style>
   </head>
   <body>
+    <a href="#main-content" class="skip-link">Skip to main content</a>
+    <header class="site-header">
+      <a class="site-header__logo" href="/">
+        <img
+          alt="Brilliant.org Logo"
+          src="./src/images/logo/svg-brilliant-logo.svg"
+          width="114"
+          height="27"
+        />
+      </a>
+
+      <nav class="site-navigation" aria-label="main">
+        <button class="site-navigation__btn site-navigation__signin">
+          Sign in
+        </button>
+      </nav>
+    </header>
+
+    <main id="main-content" class="site-main">
+      <section class="site-hero" aria-labelledby="hero-heading">
+        <div class="site-hero__message">
+          <div class="site-hero__text">
+            <h1 class="site-hero__heading" id="hero-heading">
+              A world-class tutor for every home
+            </h1>
+            <p class="site-hero__subheading">
+              Your personal tutor for math and coding. Built by top learning
+              experts from MIT and Harvard.
+            </p>
+          </div>
+          <div class="site-hero__cta">
+            <a href="./src/pages/welcome.html" class="site-hero__login--student"
+              >I'm a learner</a
+            >
+            <a href="./src/pages/welcome.html" class="site-hero__login--teacher"
+              >I'm a parent or teacher</a
+            >
+          </div>
+        </div>
+        <div class="site-hero__visual">
+          <video
+            class="site-hero__video"
+            autoplay
+            muted
+            loop
+            playsinline
+            width="738"
+            height="582.16"
+            preload="metadata"
+          >
+            <source src="./src/videos/hero-video.webm" type="video/webm" />
+            <p>
+              Your browswer doesn't support the video format you can
+              <a href="./src/videos/hero-video.webm" downalod="hero-video.webm"
+                >download it</a
+              >
+              and watch it if you like.
+            </p>
+          </video>
+        </div>
+      </section>
+      <section class="site-cards" aria-labelledby="cards-heading">
+        <h2 class="site-cards__heading" id="cards-heading">Numbers about us</h2>
+        <div class="site-card site-card__award">
+          <img
+            class="site-card__image"
+            src="./src/images/icons/svg-editor'schoice.svg"
+            width="113"
+            height="36"
+            alt=""
+          />
+          <h3 class="site-card__name">Award-winning</h3>
+          <p class="site-card__desc">learning that's effective and fun</p>
+        </div>
+        <div class="site-card site-card__star">
+          <img
+            class="site-card__image"
+            src="./src/images/icons/svg-fivestar.svg"
+            width="150"
+            height="36"
+            alt=""
+          />
+          <h3 class="site-card__name">100,000+</h3>
+          <p class="site-card__desc">5-star app store reviews</p>
+        </div>
+        <div class="site-card site-card__globe">
+          <img
+            class="site-card__image"
+            src="./src/images/icons/svg-globe.svg"
+            width="36"
+            height="36"
+            alt=""
+          />
+          <h3 class="site-card__name">10 million+</h3>
+          <p class="site-card__desc">learners around the world</p>
+        </div>
+      </section>
+    </main>
+
     <script type="module" src="./src/scripts/app.js"></script>
   </body>
 </html>
