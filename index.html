@@ -153,13 +153,13 @@
             loop
             playsinline
             width="738"
-            height="582.16"
+            height="582"
             preload="metadata"
           >
             <source src="./src/videos/hero-video.webm" type="video/webm" />
             <p>
               Your browswer doesn't support the video format you can
-              <a href="./src/videos/hero-video.webm" downalod="hero-video.webm"
+              <a href="./src/videos/hero-video.webm" download="hero-video.webm"
                 >download it</a
               >
               and watch it if you like.
@@ -203,7 +203,6 @@
           <p class="site-card__desc">learners around the world</p>
         </div>
       </section>
-
       <section class="site-intro" aria-labelledby="introHeading">
         <video
           autoplay
@@ -221,7 +220,7 @@
           Meet Koji, your personal tutor
         </h2>
       </section>
-      <section class="site-features">
+      <div class="site-features">
         <article class="site-features__card site-features__left">
           <video
             class="site-features__video"
@@ -231,7 +230,7 @@
             playsinline
             loading="lazy"
             width="555"
-            height="387.28"
+            height="387"
           >
             <source src="src/videos/concepts-click-desktop.webm" />
           </video>
@@ -263,7 +262,7 @@
             playsinline
             loading="lazy"
             width="555"
-            height="387.28"
+            height="387"
           >
             <source src="src/videos/built-to-think-desktop.webm" />
           </video>
@@ -277,7 +276,7 @@
             playsinline
             loading="lazy"
             width="555"
-            height="387.28"
+            height="387"
           >
             <source src="src/videos/adapts-desktop.webm" />
           </video>
@@ -309,13 +308,12 @@
             playsinline
             loading="lazy"
             width="555"
-            height="387.28"
+            height="387"
           >
             <source src="src/videos/keep-learning-desktop.webm" />
           </video>
         </article>
-      </section>
-
+      </div>
       <section class="site-courses" aria-labelledby="coursesHeading">
         <h2 class="site-courses__heading" id="coursesHeading">
           From grade 5 to college and beyond
@@ -327,10 +325,10 @@
           <button class="site-courses__btn--data">Data Analysis</button>
         </div>
         <div class="site-courses__list">
-          <article class="site-courses__math">
+          <div class="site-courses__math">
             <div class="site-courses__coverage site-courses__coverage--math">
-              <h4 class="site-courses__title">Covered subjects</h4>
-              <ul type="none" class="site-courses__sub-list">
+              <p class="site-courses__title">Covered subjects</p>
+              <ul class="site-courses__sub-list">
                 <li>Arithmetic Thinking</li>
                 <li>Proportional Reasoning</li>
                 <li>Probability and Chance</li>
@@ -370,7 +368,7 @@
               <video
                 class="site-courses__video"
                 width="633"
-                height="413.3"
+                height="413"
                 loading="lazy"
                 muted
                 autoplay
@@ -380,11 +378,11 @@
                 <source src="./src/videos/math-refresh.webm" />
               </video>
             </div>
-          </article>
-          <article class="site-courses__cs">
+          </div>
+          <div class="site-courses__cs">
             <div class="site-courses__coverage site-courses__coverage--cs">
-              <h4 class="site-courses__title">Covered subjects</h4>
-              <ul type="none" class="site-courses__sub-list">
+              <p class="site-courses__title">Covered subjects</p>
+              <ul class="site-courses__sub-list">
                 <li>Thinking in Code</li>
                 <li>Programming with Variables</li>
                 <li>Thinking in Python</li>
@@ -405,7 +403,7 @@
               <video
                 class="site-courses__video"
                 width="633"
-                height="413.3"
+                height="413"
                 loading="lazy"
                 muted
                 autoplay
@@ -415,11 +413,11 @@
                 <source src="./src/videos/cs-refresh.webm" />
               </video>
             </div>
-          </article>
-          <article class="site-courses__science">
+          </div>
+          <div class="site-courses__science">
             <div class="site-courses__coverage site-courses__coverage--science">
-              <h4 class="site-courses__title">Covered subjects</h4>
-              <ul type="none" class="site-courses__sub-list">
+              <p class="site-courses__title">Covered subjects</p>
+              <ul class="site-courses__sub-list">
                 <li>Scientific Thinking</li>
                 <li>Circuits</li>
                 <li>Digital Circuits</li>
@@ -431,7 +429,7 @@
               <video
                 class="site-courses__video"
                 width="633"
-                height="413.3"
+                height="413"
                 loading="lazy"
                 muted
                 autoplay
@@ -441,11 +439,11 @@
                 <source src="./src/videos/science-refresh.webm" />
               </video>
             </div>
-          </article>
-          <article class="site-courses__data">
+          </div>
+          <div class="site-courses__data">
             <div class="site-courses__coverage site-courses__coverage--data">
-              <h4 class="site-courses__title">Covered subjects</h4>
-              <ul type="none" class="site-courses__sub-list">
+              <p class="site-courses__title">Covered subjects</p>
+              <ul class="site-courses__sub-list">
                 <li>Exploring Data Visually</li>
                 <li>Probability in Data</li>
                 <li>Clustering &amp; Classification</li>
@@ -457,7 +455,7 @@
               <video
                 class="site-courses__video"
                 width="633"
-                height="413.3"
+                height="413"
                 loading="lazy"
                 muted
                 autoplay
@@ -467,22 +465,26 @@
                 <source src="./src/videos/data-refresh.webm" />
               </video>
             </div>
-          </article>
+          </div>
         </div>
       </section>
-
-      <section class="site-unique">
-        <article class="site-unique__card site-unique__left">
+      <div class="site-unique">
+        <article
+          class="site-unique__card site-unique__left"
+          aria-labelledby="uniqueScheduleHeading"
+        >
           <img
             alt="schedule"
             src="./src/images/desc-schedule-desktop.png"
             class="site-unique__video"
             loading="lazy"
             width="555"
-            height="387.28"
+            height="387"
           />
           <div class="site-unique__desc">
-            <h3 class="site-unique__title">Always on your schedule</h3>
+            <h3 class="site-unique__title" id="uniqueScheduleHeading">
+              Always on your schedule
+            </h3>
             <p class="site-unique__text">
               Say goodbye to trial-and-error hiring, driving across town, and
               fitting another thing into your schedule. Koji is there Sunday
@@ -491,9 +493,14 @@
             </p>
           </div>
         </article>
-        <article class="site-unique__card site-unique__right">
+        <article
+          class="site-unique__card site-unique__right"
+          aria-labelledby="uniqueExpertHeading"
+        >
           <div class="site-unique__desc">
-            <h3 class="site-unique__title">Bulit by top learning experts</h3>
+            <h3 class="site-unique__title" id="uniqueExpertHeading">
+              Bulit by top learning experts
+            </h3>
             <p class="site-unique__text">
               Our curriculum is crafted by award-winning teachers,
               subject-matter experts, and learning designers from top
@@ -526,11 +533,11 @@
             class="site-unique__video"
             loading="lazy"
             width="555"
-            height="387.28"
+            height="387"
           />
         </article>
-      </section>
-      <section class="site-testimonials" arialabelledby="testimonialsHeading">
+      </div>
+      <section class="site-testimonials" aria-labelledby="testimonialsHeading">
         <h2 class="site-testimonials__heading" id="testimonialsHeading">
           Students, parents, and teachers love us
         </h2>
@@ -687,9 +694,140 @@
         </figure>
 
         <!-- Figure out how to do this slider -->
-        <div class="site-testimonil__slider"></div>
+        <div class="site-testimonial__slider"></div>
       </section>
     </main>
+
+    <footer class="site-footer">
+      <section class="site-footer__cta" aria-labelledby="footerCtaHeading">
+        <h2 class="site-footer__cta-heading" id="footerCtaHeading">
+          The best tutor you'll ever have is already here
+        </h2>
+        <button class="site-footer__cta-btn">Get started</button>
+        <div class="site-footer__cta-download-links">
+          <a href="/" class="site-footer__cta--appstore">
+            <img
+              src="./src/images/logo/logo-apple.svg"
+              alt="apple"
+              width="17"
+              height="21"
+              loading="lazy"
+            />
+            <p class="site-footer__cta--appstore-text">
+              Download on the
+              <span class="site-footer__cta--appstore-name">App Store</span>
+            </p>
+          </a>
+          <a href="/" class="site-footer__cta--playstore">
+            <img
+              src="./src/images/logo/logo-playstore.svg"
+              alt="playstore"
+              width="17"
+              height="21"
+              loading="lazy"
+            />
+            <p class="site-footer__cta--playstore-text">
+              Get it on
+              <span class="site-footer__cta--playstore-name">Google Play</span>
+            </p>
+          </a>
+        </div>
+      </section>
+      <div class="site-footer__links">
+        <img
+          src="./src/images/logo/svg-brilliant-logo.svg"
+          alt="Brilliant.org"
+          width="114"
+          height="27"
+          loading="lazy"
+          class="site-footer__links-logo"
+        />
+        <div class="site-footer__links-container">
+          <div class="site-footer__service-links">
+            <div class="site-footer__product-links">
+              <p class="site-footer__product-title">Product</p>
+              <div class="site-footer__product-links-list">
+                <a href="/">Courses</a>
+                <a href="/">Pricing</a>
+                <a href="/">Gift Brilliant</a>
+                <a href="/">Homeschooling</a>
+                <a href="/">Help</a>
+              </div>
+            </div>
+            <div class="site-footer__company-links">
+              <p class="site-footer__company-title">Company</p>
+              <div class="site-footer__company-links-list">
+                <a href="/">About us</a>
+                <a href="/">Careers</a>
+                <a href="/">Educators</a>
+              </div>
+            </div>
+            <div class="site-footer__bts-links">
+              <p class="site-footer__bts-title">Behind the scenes</p>
+              <div class="site-footer__bts-links-list">
+                <a href="/">A Tutor in Every Home</a>
+                <a href="/">AI at Brilliant</a>
+                <a href="/">AI Evals for Learning Games</a>
+                <a href="/">Visual Algebra</a>
+                <a href="/">Decomposition and Abstraction</a>
+              </div>
+            </div>
+          </div>
+          <div class="site-footer__socials">
+            <a href="/" class="site-footer__social--facebook">
+              <img
+                src="./src/images/logo/logo-facebook.svg"
+                alt="Facebook"
+                width="22"
+                height="22"
+                loading="lazy"
+              />
+            </a>
+            <a href="/" class="site-footer__social--ig">
+              <img
+                src="./src/images/logo/logo-ig.svg"
+                alt="Instagram"
+                width="22"
+                height="22"
+                loading="lazy"
+              />
+            </a>
+            <a href="/" class="site-footer__social--x">
+              <img
+                src="./src/images/logo/logo-x.svg"
+                alt="X"
+                width="22"
+                height="22"
+                loading="lazy"
+              />
+            </a>
+            <a href="/" class="site-footer__social--linkedin">
+              <img
+                src="./src/images/logo/logo-linkedin.svg"
+                alt="LinkedIn"
+                width="22"
+                height="22"
+                loading="lazy"
+              />
+            </a>
+          </div>
+        </div>
+      </div>
+      <div class="site-footer__readmes">
+        <div class="site-footer__readmes-container">
+          <a href="/">Terms of service</a>
+          <a href="/">PRIVACY POLICY</a>
+          <a href="/">Do not sell my personal information</a>
+          <a href="/">California privacy policy</a>
+        </div>
+        <!-- Add a way to change the year automatically. -->
+        <p class="site-footer__copyright">
+          &copy; 2026 Brilliant Worldwide, Inc., Brilliant and the Brilliant
+          Logo are trademarks of Brilliant Worldwide, Inc.
+        </p>
+      </div>
+    </footer>
+
     <script type="module" src="./src/scripts/app.js"></script>
   </body>
 </html>
