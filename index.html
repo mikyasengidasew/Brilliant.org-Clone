@@ -84,7 +84,7 @@
         outline-offset: 2px;
       }
 
-      .number-heading {
+      .site-cards__heading {
         position: absolute !important;
         width: 1px !important;
         height: 1px !important;
@@ -99,7 +99,7 @@
     </style>
   </head>
   <body>
-    <a href="#main-content" class="skip-link">Skip to main content</a>
+    <a href="#mainContent" class="skip-link">Skip to main content</a>
     <header class="site-header">
       <a class="site-header__logo" href="/">
         <img
@@ -111,17 +111,24 @@
       </a>
 
       <nav class="site-navigation" aria-label="main">
-        <button class="site-navigation__btn site-navigation__signin">
+        <button
+          class="site-navigation__btn site-navigation__btn--primary site-navigation__signin"
+        >
           Sign in
+        </button>
+        <button
+          class="site-navigation__btn site-navigation__btn--secondary site-navigation__start"
+        >
+          Get started
         </button>
       </nav>
     </header>
 
-    <main id="main-content" class="site-main">
-      <section class="site-hero" aria-labelledby="hero-heading">
+    <main id="mainContent" class="site-main">
+      <section class="site-hero" aria-labelledby="heroHeading">
         <div class="site-hero__message">
           <div class="site-hero__text">
-            <h1 class="site-hero__heading" id="hero-heading">
+            <h1 class="site-hero__heading" id="heroHeading">
               A world-class tutor for every home
             </h1>
             <p class="site-hero__subheading">
@@ -160,8 +167,8 @@
           </video>
         </div>
       </section>
-      <section class="site-cards" aria-labelledby="cards-heading">
-        <h2 class="site-cards__heading" id="cards-heading">Numbers about us</h2>
+      <section class="site-cards" aria-labelledby="cardsHeading">
+        <h2 class="site-cards__heading" id="cardsHeading">Numbers about us</h2>
         <div class="site-card site-card__award">
           <img
             class="site-card__image"
@@ -196,8 +203,493 @@
           <p class="site-card__desc">learners around the world</p>
         </div>
       </section>
-    </main>
 
+      <section class="site-intro" aria-labelledby="introHeading">
+        <video
+          autoplay
+          muted
+          loop
+          playsinline
+          width="166"
+          height="192"
+          class="site-intro__animation"
+        >
+          <source src="src/videos/koji.mp4" />
+        </video>
+
+        <h2 id="introHeading" class="site-intro__heading">
+          Meet Koji, your personal tutor
+        </h2>
+      </section>
+      <section class="site-features">
+        <article class="site-features__card site-features__left">
+          <video
+            class="site-features__video"
+            muted
+            autoplay
+            loop
+            playsinline
+            loading="lazy"
+            width="555"
+            height="387.28"
+          >
+            <source src="src/videos/concepts-click-desktop.webm" />
+          </video>
+          <div class="site-features__desc">
+            <h3 class="site-features__title">Concepts that click</h3>
+            <p class="site-features__text">
+              Every session is visual and interactive. Instead of just
+              memorizing, you play with concepts until they click. And you work
+              through problems step-by-step, building your intuition along the
+              way.
+            </p>
+          </div>
+        </article>
+        <article class="site-features__card site-features__right">
+          <div class="site-features__desc">
+            <h3 class="site-features__title">Built to make you think</h3>
+            <p class="site-features__text">
+              Like the best human tutors, Koji asks the right questions,
+              provides visual guidance, and gets to the heart of where you’re
+              getting stuck. It’s the difference between getting the answer and
+              actually understanding it.
+            </p>
+          </div>
+          <video
+            class="site-features__video"
+            muted
+            autoplay
+            loop
+            playsinline
+            loading="lazy"
+            width="555"
+            height="387.28"
+          >
+            <source src="src/videos/built-to-think-desktop.webm" />
+          </video>
+        </article>
+        <article class="site-features__card site-features__left">
+          <video
+            class="site-features__video"
+            muted
+            autoplay
+            loop
+            playsinline
+            loading="lazy"
+            width="555"
+            height="387.28"
+          >
+            <source src="src/videos/adapts-desktop.webm" />
+          </video>
+          <div class="site-features__desc">
+            <h3 class="site-features__title">
+              Adapts to exactly where you are
+            </h3>
+            <p class="site-features__text">
+              Koji tracks what you’ve mastered and where you’re stuck, then
+              builds practice around the gaps. He speeds up when you’re ready,
+              and slows down when you need it.
+            </p>
+          </div>
+        </article>
+        <article class="site-features__card site-features__right">
+          <div class="site-features__desc">
+            <h3 class="site-features__title">Designed to keep you learning</h3>
+            <p class="site-features__text">
+              Brilliant is designed to feel like a challenge, not a chore.
+              Streaks, levels, and daily goals motivate you to build on your
+              progress and keep moving forward.
+            </p>
+          </div>
+          <video
+            class="site-features__video"
+            muted
+            autoplay
+            loop
+            playsinline
+            loading="lazy"
+            width="555"
+            height="387.28"
+          >
+            <source src="src/videos/keep-learning-desktop.webm" />
+          </video>
+        </article>
+      </section>
+
+      <section class="site-courses" aria-labelledby="coursesHeading">
+        <h2 class="site-courses__heading" id="coursesHeading">
+          From grade 5 to college and beyond
+        </h2>
+        <div class="site-courses__scroll-btns">
+          <button class="site-courses__btn--math">Math</button>
+          <button class="site-courses__btn--cs">Computer Science</button>
+          <button class="site-courses__btn--science">Science</button>
+          <button class="site-courses__btn--data">Data Analysis</button>
+        </div>
+        <div class="site-courses__list">
+          <article class="site-courses__math">
+            <div class="site-courses__coverage site-courses__coverage--math">
+              <h4 class="site-courses__title">Covered subjects</h4>
+              <ul type="none" class="site-courses__sub-list">
+                <li>Arithmetic Thinking</li>
+                <li>Proportional Reasoning</li>
+                <li>Probability and Chance</li>
+                <li>Visual Algebra</li>
+                <li>Solving Equations</li>
+                <li>Quadratics</li>
+                <li>Calculus</li>
+                <li>Exponential Functions</li>
+                <li>Coordinate Geometry</li>
+                <li>Everyday Statistics</li>
+                <li>Geometry and Measurement</li>
+                <li>Real-World Algebra</li>
+                <li>Coordinate Plane</li>
+                <li>Coordinate Transformations</li>
+                <li>Logic</li>
+                <li>Truth and Lies</li>
+                <li>Reasoning with Logic</li>
+                <li>Vectors</li>
+                <li>Infinity</li>
+                <li>Number Theory</li>
+                <li>Geometric Thinking</li>
+                <li>Bayesian Probability</li>
+                <li>Contest Math</li>
+                <li>Linear Relationships</li>
+                <li>Exponents and Radicals</li>
+                <li>Introduction to Functions</li>
+                <li>Polynomials</li>
+                <li>Trigonometric Functions</li>
+                <li>Complex Numbers</li>
+                <li>Linear Equations</li>
+                <li>Linear Systems</li>
+                <li>Polar Coordinate Plane</li>
+                <li>Equations and Curves</li>
+              </ul>
+            </div>
+            <div class="site-courses__visual">
+              <video
+                class="site-courses__video"
+                width="633"
+                height="413.3"
+                loading="lazy"
+                muted
+                autoplay
+                loop
+                playsinline
+              >
+                <source src="./src/videos/math-refresh.webm" />
+              </video>
+            </div>
+          </article>
+          <article class="site-courses__cs">
+            <div class="site-courses__coverage site-courses__coverage--cs">
+              <h4 class="site-courses__title">Covered subjects</h4>
+              <ul type="none" class="site-courses__sub-list">
+                <li>Thinking in Code</li>
+                <li>Programming with Variables</li>
+                <li>Thinking in Python</li>
+                <li>Programming with Functions</li>
+                <li>Algorithmic Thinking</li>
+                <li>Computer Science Fundamentals</li>
+                <li>Introduction to Neural Networks</li>
+                <li>How AI Works</li>
+                <li>How Technology Works</li>
+                <li>Search Engines</li>
+                <li>Cryptocurrency</li>
+                <li>Functions in Python</li>
+                <li>Recursion in Python</li>
+                <li>Algorithms in Python</li>
+              </ul>
+            </div>
+            <div class="site-courses__visual">
+              <video
+                class="site-courses__video"
+                width="633"
+                height="413.3"
+                loading="lazy"
+                muted
+                autoplay
+                loop
+                playsinline
+              >
+                <source src="./src/videos/cs-refresh.webm" />
+              </video>
+            </div>
+          </article>
+          <article class="site-courses__science">
+            <div class="site-courses__coverage site-courses__coverage--science">
+              <h4 class="site-courses__title">Covered subjects</h4>
+              <ul type="none" class="site-courses__sub-list">
+                <li>Scientific Thinking</li>
+                <li>Circuits</li>
+                <li>Digital Circuits</li>
+                <li>Quantum Computing</li>
+                <li>Beyond the Nutshell</li>
+              </ul>
+            </div>
+            <div class="site-courses__visual">
+              <video
+                class="site-courses__video"
+                width="633"
+                height="413.3"
+                loading="lazy"
+                muted
+                autoplay
+                loop
+                playsinline
+              >
+                <source src="./src/videos/science-refresh.webm" />
+              </video>
+            </div>
+          </article>
+          <article class="site-courses__data">
+            <div class="site-courses__coverage site-courses__coverage--data">
+              <h4 class="site-courses__title">Covered subjects</h4>
+              <ul type="none" class="site-courses__sub-list">
+                <li>Exploring Data Visually</li>
+                <li>Probability in Data</li>
+                <li>Clustering &amp; Classification</li>
+                <li>Regression</li>
+                <li>Predicting with Probability</li>
+              </ul>
+            </div>
+            <div class="site-courses__visual">
+              <video
+                class="site-courses__video"
+                width="633"
+                height="413.3"
+                loading="lazy"
+                muted
+                autoplay
+                loop
+                playsinline
+              >
+                <source src="./src/videos/data-refresh.webm" />
+              </video>
+            </div>
+          </article>
+        </div>
+      </section>
+
+      <section class="site-unique">
+        <article class="site-unique__card site-unique__left">
+          <img
+            alt="schedule"
+            src="./src/images/desc-schedule-desktop.png"
+            class="site-unique__video"
+            loading="lazy"
+            width="555"
+            height="387.28"
+          />
+          <div class="site-unique__desc">
+            <h3 class="site-unique__title">Always on your schedule</h3>
+            <p class="site-unique__text">
+              Say goodbye to trial-and-error hiring, driving across town, and
+              fitting another thing into your schedule. Koji is there Sunday
+              night before the test, Saturday morning for fun, and the quiet 20
+              minutes before dinner.
+            </p>
+          </div>
+        </article>
+        <article class="site-unique__card site-unique__right">
+          <div class="site-unique__desc">
+            <h3 class="site-unique__title">Bulit by top learning experts</h3>
+            <p class="site-unique__text">
+              Our curriculum is crafted by award-winning teachers,
+              subject-matter experts, and learning designers from top
+              institutions.
+            </p>
+            <div class="site-unique__logos">
+              <img src="./src/images/logo/logo-MIT.svg" alt="MIT" />
+              <img
+                src="./src/images/logo/logo-harvard.svg"
+                alt="harlogo-harvard.svg"
+              />
+              <img
+                src="./src/images/logo/logo-stanford.svg"
+                alt="stanlogo-stanford.svg"
+              />
+              <img
+                src="./src/images/logo/logo-cornell.svg"
+                alt="cornlogo-cornell.svg"
+              />
+              <img
+                src="./src/images/logo/logo-caltec.svg"
+                alt="caltelogo-caltec.svg"
+              />
+            </div>
+          </div>
+
+          <img
+            alt="experts"
+            src="./src/images/desc-experts-desktop.png"
+            class="site-unique__video"
+            loading="lazy"
+            width="555"
+            height="387.28"
+          />
+        </article>
+      </section>
+      <section class="site-testimonials" arialabelledby="testimonialsHeading">
+        <h2 class="site-testimonials__heading" id="testimonialsHeading">
+          Students, parents, and teachers love us
+        </h2>
+        <figure class="site-testimonial">
+          <img
+            src="./src/images/icons/icon-quote.webp"
+            alt=""
+            width="40"
+            height="40"
+            class="site-testimonial__quote-icon"
+          />
+          <blockquote class="site-testimonial__quote-container">
+            <p class="site-testimonial__quote">
+              They enthusiastically do it outside of calls. I had 8th graders
+              say, 'This makes me want to do more math!'
+            </p>
+          </blockquote>
+          <div class="site-testimonial__person">
+            <img
+              src="src/images/testimonials/tst-aaron.png"
+              alt="Aaron"
+              class="site-testimonial__person-pp"
+              width="100"
+              height="100"
+              loading="lazy"
+            />
+            <div class="site-testimonial__person-detail">
+              <cite class="site-testimonial__person-name">Aaron</cite>
+              <span class="site-testimonial__person-position"
+                >Algebra Teacher</span
+              >
+            </div>
+          </div>
+        </figure>
+        <figure class="site-testimonial">
+          <img
+            src="./src/images/icons/icon-quote.webp"
+            alt=""
+            width="40"
+            height="40"
+            class="site-testimonial__quote-icon"
+          />
+          <blockquote class="site-testimonial__quote-container">
+            <p class="site-testimonial__quote">
+              I wasn't getting the slope unit in class, but it finally clicked
+              after 20 minutes talking to Koji!
+            </p>
+          </blockquote>
+          <div class="site-testimonial__person">
+            <img
+              src="src/images/testimonials/tst-eliza.png"
+              alt="Eliza"
+              class="site-testimonial__person-pp"
+              width="100"
+              height="100"
+              loading="lazy"
+            />
+            <div class="site-testimonial__person-detail">
+              <cite class="site-testimonial__person-name">Eliza</cite>
+              <span class="site-testimonial__person-position">7th grader</span>
+            </div>
+          </div>
+        </figure>
+        <figure class="site-testimonial">
+          <img
+            src="./src/images/icons/icon-quote.webp"
+            alt=""
+            width="40"
+            height="40"
+            class="site-testimonial__quote-icon"
+          />
+          <blockquote class="site-testimonial__quote-container">
+            <p class="site-testimonial__quote">
+              I didn't expect him to learn this fast. He explained how to write
+              algorithms at dinner tonight.
+            </p>
+          </blockquote>
+          <div class="site-testimonial__person">
+            <img
+              src="src/images/testimonials/tst-noah.png"
+              alt="Noah"
+              class="site-testimonial__person-pp"
+              width="100"
+              height="100"
+              loading="lazy"
+            />
+            <div class="site-testimonial__person-detail">
+              <cite class="site-testimonial__person-name">Noah</cite>
+              <span class="site-testimonial__person-position"
+                >Parent of 16 year old</span
+              >
+            </div>
+          </div>
+        </figure>
+        <figure class="site-testimonial">
+          <img
+            src="./src/images/icons/icon-quote.webp"
+            alt=""
+            width="40"
+            height="40"
+            class="site-testimonial__quote-icon"
+          />
+          <blockquote class="site-testimonial__quote-container">
+            <p class="site-testimonial__quote">
+              I learned the basics of Trigonometry in 12 days, I just got into a
+              flow. I'm best in my class now.
+            </p>
+          </blockquote>
+          <div class="site-testimonial__person">
+            <img
+              src="src/images/testimonials/tst-tyler.png"
+              alt="Tyler"
+              class="site-testimonial__person-pp"
+              width="100"
+              height="100"
+              loading="lazy"
+            />
+            <div class="site-testimonial__person-detail">
+              <cite class="site-testimonial__person-name">Tyler</cite>
+              <span class="site-testimonial__person-position">10th grader</span>
+            </div>
+          </div>
+        </figure>
+        <figure class="site-testimonial">
+          <img
+            src="./src/images/icons/icon-quote.webp"
+            alt=""
+            width="40"
+            height="40"
+            class="site-testimonial__quote-icon"
+          />
+          <blockquote class="site-testimonial__quote-container">
+            <p class="site-testimonial__quote">
+              She'll get stuck on a problem and then yell, 'Never mind, Mom, I
+              got it!' How great is that?
+            </p>
+          </blockquote>
+          <div class="site-testimonial__person">
+            <img
+              src="src/images/testimonials/tst-arianne.png"
+              alt="Arianne"
+              class="site-testimonial__person-pp"
+              width="100"
+              height="100"
+              loading="lazy"
+            />
+            <div class="site-testimonial__person-detail">
+              <cite class="site-testimonial__person-name">Arianne</cite>
+              <span class="site-testimonial__person-position"
+                >Parent of 10 year old</span
+              >
+            </div>
+          </div>
+        </figure>
+
+        <!-- Figure out how to do this slider -->
+        <div class="site-testimonil__slider"></div>
+      </section>
+    </main>
     <script type="module" src="./src/scripts/app.js"></script>
   </body>
 </html>
