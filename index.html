@@ -1,833 +1,554 @@
 <!doctype html>
 <html lang="en">
-  <head>
-    <!-- ESSENTIALS -->
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-    <title>Brilliant | Learn by doing</title>
-    <meta
-      name="description"
-      content="Guided interactive problem solving that’s effective and fun. Try thousands of interactive lessons in math, programming, data analysis, AI, science, and more."
-    />
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Brilliant | Learn by doing</title>
+  <meta name="description"
+    content="Guided interactive problem solving that’s effective and fun. Try thousands of interactive lessons in math, programming, data analysis, AI, science, and more.">
+  <link rel="preload" href="src/fonts/inter/Inter-VariableFont_opsz,wght.woff2" as="font" type="font/woff2"
+    crossorigin="anonymous">
+  <link rel="preload" href="src/fonts/CoFo/CoFo_Robert-Regular.woff2" as="font" type="font/woff2"
+    crossorigin="anonymous">
+  <link rel="preload" href="src/fonts/CoFo/CoFo_Robert-Medium.woff2" as="font" type="font/woff2"
+    crossorigin="anonymous">
+  <link rel="preload" href="src/fonts/AnonymousPro/AnonymousPro-Regular.woff2" as="font" type="font/woff2"
+    crossorigin="anonymous">
+  <link rel="preload" href="src/fonts/AnonymousPro/AnonymousPro-Bold.woff2" as="font" type="font/woff2"
+    crossorigin="anonymous">
+  <meta name="robots" content="index, follow, max-snippet: -1, max-image-preview: standard">
+  <!-- TODO: Change it with your domain name later -->
+  <link rel="canonical" href="https://brilliant.org">
+  <link rel="icon" href="public/favicon.png" type="image/png">
+  <link rel="apple-touch-icon" href="public/favicon.png">
+  <meta name="color-scheme" content="light">
+  <link rel="stylesheet" href="./src/styles/styles.css">
+  <style>
+    .skip-link {
+      position: absolute;
+      top: -60px;
+      left: 0px;
+      z-index: 10000;
+      background-color: #000;
+      color: #fff;
+      padding: 10px 20px;
+      border-radius: 0 0 4px 0;
+      text-align: center;
+      text-decoration: none;
+      font-weight: 600;
+      transition: top 0.2s ease-in-out;
+    }
 
-    <!-- PERFORMANCE -->
-    <link
-      rel="preload"
-      href="src/fonts/inter/Inter-VariableFont_opsz,wght.woff2"
-      as="font"
-      type="font/woff2"
-      crossorigin="anonymous"
-    />
-    <link
-      rel="preload"
-      href="src/fonts/CoFo/CoFo_Robert-Regular.woff2"
-      as="font"
-      type="font/woff2"
-      crossorigin="anonymous"
-    />
-    <link
-      rel="preload"
-      href="src/fonts/CoFo/CoFo_Robert-Medium.woff2"
-      as="font"
-      type="font/woff2"
-      crossorigin="anonymous"
-    />
-    <link
-      rel="preload"
-      href="src/fonts/AnonymousPro/AnonymousPro-Regular.woff2"
-      as="font"
-      type="font/woff2"
-      crossorigin="anonymous"
-    />
-    <link
-      rel="preload"
-      href="src/fonts/AnonymousPro/AnonymousPro-Bold.woff2"
-      as="font"
-      type="font/woff2"
-      crossorigin="anonymous"
-    />
+    .skip-link:focus {
+      top: 0;
+      outline: 2px solid #fff;
+      outline-offset: 2px;
+    }
 
-    <!-- SEO -->
-    <meta
-      name="robots"
-      content="index, follow, max-snippets: -1, max-image-preview: standard"
-    />
-    <link rel="canonical" href="http://127.0.0.1:5500/index.html" />
+    .site-cards__heading,
+    .site-features__heading {
+      position: absolute !important;
+      width: 1px !important;
+      height: 1px !important;
+      padding: 0 !important;
+      margin: -1px !important;
+      overflow: hidden !important;
+      clip: rect(0, 0, 0, 0) !important;
+      border: 0 !important;
+      white-space: nowrap !important;
+    }
+  </style>
+</head>
 
-    <!-- BROWSER UI -->
+<body>
+  <a href="#mainContent" class="skip-link">Skip to main content</a>
+  <header class="site-header">
+    <a class="site-header__logo" href="/">
+      <img alt="Brilliant.org logo" src="./src/images/logo/svg-brilliant-logo.svg" width="114" height="27">
+    </a>
 
-    <link rel="icon" href="public/favicon.png" type="image/png" />
-    <link rel="apple-touch-icon" href="public/favicon.png" />
-    <meta name="color-scheme" content="light" />
+    <nav class="site-navigation" aria-label="Main">
+      <button class="site-navigation__btn site-navigation__btn--primary site-navigation__signin">
+        Sign in
+      </button>
+      <button class="site-navigation__btn site-navigation__btn--secondary site-navigation__start">
+        Get started
+      </button>
+    </nav>
+  </header>
 
-    <link rel="stylesheet" href="./src/styles/styles.css" />
-    <style>
-      .skip-link {
-        position: absolute;
-        top: -60px;
-        left: 0px;
-        z-index: 10000;
-        background-color: #000;
-        color: #fff;
-        padding: 10px 20px;
-        border-radius: 0 0 4px 0;
-        text-align: center;
-        text-decoration: none;
-        font-weight: 600;
-        transition: top 0.2s ease-in-out;
-      }
-
-      .skip-link:focus {
-        top: 0;
-        outline: 2px solid #fff;
-        outline-offset: 2px;
-      }
-
-      .site-cards__heading {
-        position: absolute !important;
-        width: 1px !important;
-        height: 1px !important;
-        padding: 0 !important;
-        margin: -1px !important;
-        overflow: hidden !important;
-        clip: rect(0, 0, 0, 0) !important;
-        border: 0 !important;
-        /* Prevents text from breaking layouts */
-        white-space: nowrap !important;
-      }
-    </style>
-  </head>
-  <body>
-    <a href="#mainContent" class="skip-link">Skip to main content</a>
-    <header class="site-header">
-      <a class="site-header__logo" href="/">
-        <img
-          alt="Brilliant.org Logo"
-          src="./src/images/logo/svg-brilliant-logo.svg"
-          width="114"
-          height="27"
-        />
-      </a>
-
-      <nav class="site-navigation" aria-label="main">
-        <button
-          class="site-navigation__btn site-navigation__btn--primary site-navigation__signin"
-        >
-          Sign in
-        </button>
-        <button
-          class="site-navigation__btn site-navigation__btn--secondary site-navigation__start"
-        >
-          Get started
-        </button>
-      </nav>
-    </header>
-
-    <main id="mainContent" class="site-main">
-      <section class="site-hero" aria-labelledby="heroHeading">
-        <div class="site-hero__message">
-          <div class="site-hero__text">
-            <h1 class="site-hero__heading" id="heroHeading">
-              A world-class tutor for every home
-            </h1>
-            <p class="site-hero__subheading">
-              Your personal tutor for math and coding. Built by top learning
-              experts from MIT and Harvard.
-            </p>
-          </div>
-          <div class="site-hero__cta">
-            <a href="./src/pages/welcome.html" class="site-hero__login--student"
-              >I'm a learner</a
-            >
-            <a href="./src/pages/welcome.html" class="site-hero__login--teacher"
-              >I'm a parent or teacher</a
-            >
-          </div>
+  <main id="mainContent" class="site-main">
+    <section class="site-hero" aria-labelledby="heroHeading">
+      <div class="site-hero__message">
+        <div class="site-hero__text">
+          <h1 class="site-hero__heading" id="heroHeading">
+            A world-class tutor for every home
+          </h1>
+          <p class="site-hero__subheading">
+            Your personal tutor for math and coding. Built by top learning
+            experts from MIT and Harvard.
+          </p>
         </div>
-        <div class="site-hero__visual">
-          <video
-            class="site-hero__video"
-            autoplay
-            muted
-            loop
-            playsinline
-            width="738"
-            height="582"
-            preload="metadata"
-          >
-            <source src="./src/videos/hero-video.webm" type="video/webm" />
-            <p>
-              Your browswer doesn't support the video format you can
-              <a href="./src/videos/hero-video.webm" download="hero-video.webm"
-                >download it</a
-              >
-              and watch it if you like.
-            </p>
-          </video>
+        <div class="site-hero__cta">
+          <a href="./src/pages/welcome.html" class="site-hero__login--student">I'm a learner</a>
+          <a href="./src/pages/welcome.html" class="site-hero__login--teacher">I'm a parent or teacher</a>
         </div>
-      </section>
-      <section class="site-cards" aria-labelledby="cardsHeading">
-        <h2 class="site-cards__heading" id="cardsHeading">Numbers about us</h2>
-        <div class="site-card site-card__award">
-          <img
-            class="site-card__image"
-            src="./src/images/icons/svg-editor'schoice.svg"
-            width="113"
-            height="36"
-            alt=""
-          />
-          <h3 class="site-card__name">Award-winning</h3>
-          <p class="site-card__desc">learning that's effective and fun</p>
-        </div>
-        <div class="site-card site-card__star">
-          <img
-            class="site-card__image"
-            src="./src/images/icons/svg-fivestar.svg"
-            width="150"
-            height="36"
-            alt=""
-          />
-          <h3 class="site-card__name">100,000+</h3>
-          <p class="site-card__desc">5-star app store reviews</p>
-        </div>
-        <div class="site-card site-card__globe">
-          <img
-            class="site-card__image"
-            src="./src/images/icons/svg-globe.svg"
-            width="36"
-            height="36"
-            alt=""
-          />
-          <h3 class="site-card__name">10 million+</h3>
-          <p class="site-card__desc">learners around the world</p>
-        </div>
-      </section>
-      <section class="site-intro" aria-labelledby="introHeading">
-        <video
-          autoplay
-          muted
-          loop
-          playsinline
-          width="166"
-          height="192"
-          class="site-intro__animation"
-        >
-          <source src="src/videos/koji.mp4" />
+      </div>
+      <div class="site-hero__visual">
+        <video class="site-hero__video" autoplay muted loop playsinline width="738" height="582" preload="metadata"
+          aria-label="Video of Students learning using Brilliant.org">
+          <source src="./src/videos/hero-video.webm" type="video/webm">
+          <p>
+            Your browser doesn't support the video format. You can
+            <a href="./src/videos/hero-video.webm" download="hero-video.webm">download it</a>
+            and watch it if you like.
+
+          </p>
         </video>
-
-        <h2 id="introHeading" class="site-intro__heading">
-          Meet Koji, your personal tutor
-        </h2>
-      </section>
-      <div class="site-features">
-        <article class="site-features__card site-features__left">
-          <video
-            class="site-features__video"
-            muted
-            autoplay
-            loop
-            playsinline
-            loading="lazy"
-            width="555"
-            height="387"
-          >
-            <source src="src/videos/concepts-click-desktop.webm" />
-          </video>
-          <div class="site-features__desc">
-            <h3 class="site-features__title">Concepts that click</h3>
-            <p class="site-features__text">
-              Every session is visual and interactive. Instead of just
-              memorizing, you play with concepts until they click. And you work
-              through problems step-by-step, building your intuition along the
-              way.
-            </p>
-          </div>
-        </article>
-        <article class="site-features__card site-features__right">
-          <div class="site-features__desc">
-            <h3 class="site-features__title">Built to make you think</h3>
-            <p class="site-features__text">
-              Like the best human tutors, Koji asks the right questions,
-              provides visual guidance, and gets to the heart of where you’re
-              getting stuck. It’s the difference between getting the answer and
-              actually understanding it.
-            </p>
-          </div>
-          <video
-            class="site-features__video"
-            muted
-            autoplay
-            loop
-            playsinline
-            loading="lazy"
-            width="555"
-            height="387"
-          >
-            <source src="src/videos/built-to-think-desktop.webm" />
-          </video>
-        </article>
-        <article class="site-features__card site-features__left">
-          <video
-            class="site-features__video"
-            muted
-            autoplay
-            loop
-            playsinline
-            loading="lazy"
-            width="555"
-            height="387"
-          >
-            <source src="src/videos/adapts-desktop.webm" />
-          </video>
-          <div class="site-features__desc">
-            <h3 class="site-features__title">
-              Adapts to exactly where you are
-            </h3>
-            <p class="site-features__text">
-              Koji tracks what you’ve mastered and where you’re stuck, then
-              builds practice around the gaps. He speeds up when you’re ready,
-              and slows down when you need it.
-            </p>
-          </div>
-        </article>
-        <article class="site-features__card site-features__right">
-          <div class="site-features__desc">
-            <h3 class="site-features__title">Designed to keep you learning</h3>
-            <p class="site-features__text">
-              Brilliant is designed to feel like a challenge, not a chore.
-              Streaks, levels, and daily goals motivate you to build on your
-              progress and keep moving forward.
-            </p>
-          </div>
-          <video
-            class="site-features__video"
-            muted
-            autoplay
-            loop
-            playsinline
-            loading="lazy"
-            width="555"
-            height="387"
-          >
-            <source src="src/videos/keep-learning-desktop.webm" />
-          </video>
-        </article>
       </div>
-      <section class="site-courses" aria-labelledby="coursesHeading">
-        <h2 class="site-courses__heading" id="coursesHeading">
-          From grade 5 to college and beyond
-        </h2>
-        <div class="site-courses__scroll-btns">
-          <button class="site-courses__btn--math">Math</button>
-          <button class="site-courses__btn--cs">Computer Science</button>
-          <button class="site-courses__btn--science">Science</button>
-          <button class="site-courses__btn--data">Data Analysis</button>
+    </section>
+    <section class="site-cards" aria-labelledby="cardsHeading">
+      <h2 class="site-cards__heading" id="cardsHeading">Numbers about us</h2>
+      <div class="site-card site-card__award">
+        <img class="site-card__image" src="./src/images/icons/svg-editor'schoice.svg" width="113" height="36" alt="">
+        <h3 class="site-card__name">Award-winning</h3>
+        <p class="site-card__desc">learning that's effective and fun</p>
+      </div>
+      <div class="site-card site-card__star">
+        <img class="site-card__image" src="./src/images/icons/svg-fivestar.svg" width="150" height="36" alt="">
+        <h3 class="site-card__name">100,000+</h3>
+        <p class="site-card__desc">5-star app store reviews</p>
+      </div>
+      <div class="site-card site-card__globe">
+        <img class="site-card__image" src="./src/images/icons/svg-globe.svg" width="36" height="36" alt="">
+        <h3 class="site-card__name">10 million+</h3>
+        <p class="site-card__desc">learners around the world</p>
+      </div>
+    </section>
+    <section class="site-intro" aria-labelledby="introHeading">
+      <video autoplay muted loop playsinline width="166" height="192" class="site-intro__animation">
+        <source src="src/videos/koji.mp4">
+        <p>Short looping animation of Koji, the interactive tutor character.</p>
+      </video>
+      <h2 id="introHeading" class="site-intro__heading">
+        Meet Koji, your personal tutor
+      </h2>
+    </section>
+    <section class="site-features" aria-labelledby="featuresHeading">
+      <h2 id="featuresHeading" class="site-features__heading">
+        Our Features
+      </h2>
+      <article class="site-features__card site-features__left">
+        <video class="site-features__video" width="555" height="387"
+          title="Animation showing a concept clicking into place" muted autoplay loop playsinline>
+          <source src="src/videos/concepts-click-desktop.webm">
+        </video>
+        <div class="site-features__desc">
+          <h3 class="site-features__title">Concepts that click</h3>
+          <p class="site-features__text">
+            Every session is visual and interactive. Instead of just
+            memorizing, you play with concepts until they click. And you work
+            through problems step-by-step, building your intuition along the
+            way.
+          </p>
         </div>
-        <div class="site-courses__list">
-          <div class="site-courses__math">
-            <div class="site-courses__coverage site-courses__coverage--math">
-              <p class="site-courses__title">Covered subjects</p>
-              <ul class="site-courses__sub-list">
-                <li>Arithmetic Thinking</li>
-                <li>Proportional Reasoning</li>
-                <li>Probability and Chance</li>
-                <li>Visual Algebra</li>
-                <li>Solving Equations</li>
-                <li>Quadratics</li>
-                <li>Calculus</li>
-                <li>Exponential Functions</li>
-                <li>Coordinate Geometry</li>
-                <li>Everyday Statistics</li>
-                <li>Geometry and Measurement</li>
-                <li>Real-World Algebra</li>
-                <li>Coordinate Plane</li>
-                <li>Coordinate Transformations</li>
-                <li>Logic</li>
-                <li>Truth and Lies</li>
-                <li>Reasoning with Logic</li>
-                <li>Vectors</li>
-                <li>Infinity</li>
-                <li>Number Theory</li>
-                <li>Geometric Thinking</li>
-                <li>Bayesian Probability</li>
-                <li>Contest Math</li>
-                <li>Linear Relationships</li>
-                <li>Exponents and Radicals</li>
-                <li>Introduction to Functions</li>
-                <li>Polynomials</li>
-                <li>Trigonometric Functions</li>
-                <li>Complex Numbers</li>
-                <li>Linear Equations</li>
-                <li>Linear Systems</li>
-                <li>Polar Coordinate Plane</li>
-                <li>Equations and Curves</li>
-              </ul>
-            </div>
-            <div class="site-courses__visual">
-              <video
-                class="site-courses__video"
-                width="633"
-                height="413"
-                loading="lazy"
-                muted
-                autoplay
-                loop
-                playsinline
-              >
-                <source src="./src/videos/math-refresh.webm" />
-              </video>
-            </div>
+      </article>
+      <article class="site-features__card site-features__right">
+        <div class="site-features__desc">
+          <h3 class="site-features__title">Built to make you think</h3>
+          <p class="site-features__text">
+            Like the best human tutors, Koji asks the right questions,
+            provides visual guidance, and gets to the heart of where you’re
+            getting stuck. It’s the difference between getting the answer and
+            actually understanding it.
+          </p>
+        </div>
+        <video class="site-features__video" width="555" height="387" title="Animation showing how Koji make you think"
+          muted autoplay loop playsinline>
+          <source src="src/videos/built-to-think-desktop.webm">
+        </video>
+      </article>
+      <article class="site-features__card site-features__left">
+        <video class="site-features__video" width="555" height="387" title="Animation showing how adaptive brilliant is"
+          muted autoplay loop playsinline>
+          <source src="src/videos/adapts-desktop.webm">
+        </video>
+        <div class="site-features__desc">
+          <h3 class="site-features__title">
+            Adapts to exactly where you are
+          </h3>
+          <p class="site-features__text">
+            Koji tracks what you’ve mastered and where you’re stuck, then
+            builds practice around the gaps. He speeds up when you’re ready,
+            and slows down when you need it.
+          </p>
+        </div>
+      </article>
+      <article class="site-features__card site-features__right">
+        <div class="site-features__desc">
+          <h3 class="site-features__title">Designed to keep you learning</h3>
+          <p class="site-features__text">
+            Brilliant is designed to feel like a challenge, not a chore.
+            Streaks, levels, and daily goals motivate you to build on your
+            progress and keep moving forward.
+          </p>
+        </div>
+        <video class="site-features__video" width="555" height="387"
+          title="Animation showing the app design to keep you learning" muted autoplay loop playsinline>
+          <source src="src/videos/keep-learning-desktop.webm">
+        </video>
+      </article>
+    </section>
+    <section class="site-courses" aria-labelledby="coursesHeading">
+      <h2 class="site-courses__heading" id="coursesHeading">
+        From grade 5 to college and beyond
+      </h2>
+      <div class="site-courses__scroll-btns" role="tablist">
+        <button class="site-courses__btn--math" id="courseMathBtn" role="tab" aria-pressed="false">Math</button>
+        <button class="site-courses__btn--cs" id="courseCsBtn" role="tab" aria-pressed="false">Computer
+          Science</button>
+        <button class="site-courses__btn--science" id="courseScienceBtn" role="tab"
+          aria-pressed="false">Science</button>
+        <button class="site-courses__btn--data" id="courseDataBtn" role="tab" aria-pressed="false">Data
+          Analysis</button>
+      </div>
+      <div class="site-courses__list">
+        <div class="site-courses__math">
+          <div class="site-courses__coverage site-courses__coverage--math">
+            <h3 class="site-courses__title">Covered subjects</h3>
+            <ul class="site-courses__sub-list">
+              <li>Arithmetic Thinking</li>
+              <li>Proportional Reasoning</li>
+              <li>Probability and Chance</li>
+              <li>Visual Algebra</li>
+              <li>Solving Equations</li>
+              <li>Quadratics</li>
+              <li>Calculus</li>
+              <li>Exponential Functions</li>
+              <li>Coordinate Geometry</li>
+              <li>Everyday Statistics</li>
+              <li>Geometry and Measurement</li>
+              <li>Real-World Algebra</li>
+              <li>Coordinate Plane</li>
+              <li>Coordinate Transformations</li>
+              <li>Logic</li>
+              <li>Truth and Lies</li>
+              <li>Reasoning with Logic</li>
+              <li>Vectors</li>
+              <li>Infinity</li>
+              <li>Number Theory</li>
+              <li>Geometric Thinking</li>
+              <li>Bayesian Probability</li>
+              <li>Contest Math</li>
+              <li>Linear Relationships</li>
+              <li>Exponents and Radicals</li>
+              <li>Introduction to Functions</li>
+              <li>Polynomials</li>
+              <li>Trigonometric Functions</li>
+              <li>Complex Numbers</li>
+              <li>Linear Equations</li>
+              <li>Linear Systems</li>
+              <li>Polar Coordinate Plane</li>
+              <li>Equations and Curves</li>
+            </ul>
           </div>
-          <div class="site-courses__cs">
-            <div class="site-courses__coverage site-courses__coverage--cs">
-              <p class="site-courses__title">Covered subjects</p>
-              <ul class="site-courses__sub-list">
-                <li>Thinking in Code</li>
-                <li>Programming with Variables</li>
-                <li>Thinking in Python</li>
-                <li>Programming with Functions</li>
-                <li>Algorithmic Thinking</li>
-                <li>Computer Science Fundamentals</li>
-                <li>Introduction to Neural Networks</li>
-                <li>How AI Works</li>
-                <li>How Technology Works</li>
-                <li>Search Engines</li>
-                <li>Cryptocurrency</li>
-                <li>Functions in Python</li>
-                <li>Recursion in Python</li>
-                <li>Algorithms in Python</li>
-              </ul>
-            </div>
-            <div class="site-courses__visual">
-              <video
-                class="site-courses__video"
-                width="633"
-                height="413"
-                loading="lazy"
-                muted
-                autoplay
-                loop
-                playsinline
-              >
-                <source src="./src/videos/cs-refresh.webm" />
-              </video>
-            </div>
-          </div>
-          <div class="site-courses__science">
-            <div class="site-courses__coverage site-courses__coverage--science">
-              <p class="site-courses__title">Covered subjects</p>
-              <ul class="site-courses__sub-list">
-                <li>Scientific Thinking</li>
-                <li>Circuits</li>
-                <li>Digital Circuits</li>
-                <li>Quantum Computing</li>
-                <li>Beyond the Nutshell</li>
-              </ul>
-            </div>
-            <div class="site-courses__visual">
-              <video
-                class="site-courses__video"
-                width="633"
-                height="413"
-                loading="lazy"
-                muted
-                autoplay
-                loop
-                playsinline
-              >
-                <source src="./src/videos/science-refresh.webm" />
-              </video>
-            </div>
-          </div>
-          <div class="site-courses__data">
-            <div class="site-courses__coverage site-courses__coverage--data">
-              <p class="site-courses__title">Covered subjects</p>
-              <ul class="site-courses__sub-list">
-                <li>Exploring Data Visually</li>
-                <li>Probability in Data</li>
-                <li>Clustering &amp; Classification</li>
-                <li>Regression</li>
-                <li>Predicting with Probability</li>
-              </ul>
-            </div>
-            <div class="site-courses__visual">
-              <video
-                class="site-courses__video"
-                width="633"
-                height="413"
-                loading="lazy"
-                muted
-                autoplay
-                loop
-                playsinline
-              >
-                <source src="./src/videos/data-refresh.webm" />
-              </video>
-            </div>
+          <div class="site-courses__visual">
+            <video class="site-courses__video" width="633" height="413" muted autoplay loop playsinline>
+              <source src="./src/videos/math-refresh.webm">
+            </video>
           </div>
         </div>
-      </section>
-      <div class="site-unique">
-        <article
-          class="site-unique__card site-unique__left"
-          aria-labelledby="uniqueScheduleHeading"
-        >
-          <img
-            alt="schedule"
-            src="./src/images/desc-schedule-desktop.png"
-            class="site-unique__video"
-            loading="lazy"
-            width="555"
-            height="387"
-          />
-          <div class="site-unique__desc">
-            <h3 class="site-unique__title" id="uniqueScheduleHeading">
-              Always on your schedule
-            </h3>
-            <p class="site-unique__text">
-              Say goodbye to trial-and-error hiring, driving across town, and
-              fitting another thing into your schedule. Koji is there Sunday
-              night before the test, Saturday morning for fun, and the quiet 20
-              minutes before dinner.
-            </p>
+        <div class="site-courses__cs">
+          <div class="site-courses__coverage site-courses__coverage--cs">
+            <h3 class="site-courses__title">Covered subjects</h3>
+            <ul class="site-courses__sub-list">
+              <li>Thinking in Code</li>
+              <li>Programming with Variables</li>
+              <li>Thinking in Python</li>
+              <li>Programming with Functions</li>
+              <li>Algorithmic Thinking</li>
+              <li>Computer Science Fundamentals</li>
+              <li>Introduction to Neural Networks</li>
+              <li>How AI Works</li>
+              <li>How Technology Works</li>
+              <li>Search Engines</li>
+              <li>Cryptocurrency</li>
+              <li>Functions in Python</li>
+              <li>Recursion in Python</li>
+              <li>Algorithms in Python</li>
+            </ul>
           </div>
-        </article>
-        <article
-          class="site-unique__card site-unique__right"
-          aria-labelledby="uniqueExpertHeading"
-        >
-          <div class="site-unique__desc">
-            <h3 class="site-unique__title" id="uniqueExpertHeading">
-              Bulit by top learning experts
-            </h3>
-            <p class="site-unique__text">
-              Our curriculum is crafted by award-winning teachers,
-              subject-matter experts, and learning designers from top
-              institutions.
-            </p>
-            <div class="site-unique__logos">
-              <img src="./src/images/logo/logo-MIT.svg" alt="MIT" />
-              <img
-                src="./src/images/logo/logo-harvard.svg"
-                alt="harlogo-harvard.svg"
-              />
-              <img
-                src="./src/images/logo/logo-stanford.svg"
-                alt="stanlogo-stanford.svg"
-              />
-              <img
-                src="./src/images/logo/logo-cornell.svg"
-                alt="cornlogo-cornell.svg"
-              />
-              <img
-                src="./src/images/logo/logo-caltec.svg"
-                alt="caltelogo-caltec.svg"
-              />
-            </div>
+          <div class="site-courses__visual">
+            <video class="site-courses__video" width="633" height="413" muted autoplay loop playsinline>
+              <source src="./src/videos/cs-refresh.webm">
+            </video>
           </div>
-
-          <img
-            alt="experts"
-            src="./src/images/desc-experts-desktop.png"
-            class="site-unique__video"
-            loading="lazy"
-            width="555"
-            height="387"
-          />
-        </article>
+        </div>
+        <div class="site-courses__science">
+          <div class="site-courses__coverage site-courses__coverage--science">
+            <h3 class="site-courses__title">Covered subjects</h3>
+            <ul class="site-courses__sub-list">
+              <li>Scientific Thinking</li>
+              <li>Circuits</li>
+              <li>Digital Circuits</li>
+              <li>Quantum Computing</li>
+              <li>Beyond the Nutshell</li>
+            </ul>
+          </div>
+          <div class="site-courses__visual">
+            <video class="site-courses__video" width="633" height="413" muted autoplay loop playsinline>
+              <source src="./src/videos/science-refresh.webm">
+            </video>
+          </div>
+        </div>
+        <div class="site-courses__data">
+          <div class="site-courses__coverage site-courses__coverage--data">
+            <h3 class="site-courses__title">Covered subjects</h3>
+            <ul class="site-courses__sub-list">
+              <li>Exploring Data Visually</li>
+              <li>Probability in Data</li>
+              <li>Clustering &amp; Classification</li>
+              <li>Regression</li>
+              <li>Predicting with Probability</li>
+            </ul>
+          </div>
+          <div class="site-courses__visual">
+            <video class="site-courses__video" width="633" height="413" muted autoplay loop playsinline>
+              <source src="./src/videos/data-refresh.webm">
+            </video>
+          </div>
+        </div>
       </div>
-      <section class="site-testimonials" aria-labelledby="testimonialsHeading">
-        <h2 class="site-testimonials__heading" id="testimonialsHeading">
-          Students, parents, and teachers love us
-        </h2>
-        <figure class="site-testimonial">
-          <img
-            src="./src/images/icons/icon-quote.webp"
-            alt=""
-            width="40"
-            height="40"
-            class="site-testimonial__quote-icon"
-          />
-          <blockquote class="site-testimonial__quote-container">
-            <p class="site-testimonial__quote">
-              They enthusiastically do it outside of calls. I had 8th graders
-              say, 'This makes me want to do more math!'
-            </p>
-          </blockquote>
-          <div class="site-testimonial__person">
-            <img
-              src="src/images/testimonials/tst-aaron.png"
-              alt="Aaron"
-              class="site-testimonial__person-pp"
-              width="100"
-              height="100"
-              loading="lazy"
-            />
-            <div class="site-testimonial__person-detail">
-              <cite class="site-testimonial__person-name">Aaron</cite>
-              <span class="site-testimonial__person-position"
-                >Algebra Teacher</span
-              >
-            </div>
+    </section>
+    <div class="site-unique">
+      <article class="site-unique__card site-unique__left" aria-labelledby="uniqueScheduleHeading">
+        <img alt="schedule" src="./src/images/desc-schedule-desktop.png" class="site-unique__img" loading="lazy"
+          width="555" height="387">
+        <div class="site-unique__desc">
+          <h3 class="site-unique__title" id="uniqueScheduleHeading">
+            Always on your schedule
+          </h3>
+          <p class="site-unique__text">
+            Say goodbye to trial-and-error hiring, driving across town, and
+            fitting another thing into your schedule. Koji is there Sunday
+            night before the test, Saturday morning for fun, and the quiet 20
+            minutes before dinner.
+          </p>
+        </div>
+      </article>
+      <article class="site-unique__card site-unique__right" aria-labelledby="uniqueExpertHeading">
+        <div class="site-unique__desc">
+          <h3 class="site-unique__title" id="uniqueExpertHeading">
+            Built by top learning experts
+          </h3>
+          <p class="site-unique__text">
+            Our curriculum is crafted by award-winning teachers,
+            subject-matter experts, and learning designers from top
+            institutions.
+          </p>
+          <div class="site-unique__logos">
+            <img src="./src/images/logo/logo-MIT.svg" alt="MIT">
+            <img src="./src/images/logo/logo-harvard.svg" alt="Harvard">
+            <img src="./src/images/logo/logo-stanford.svg" alt="Stanford">
+            <img src="./src/images/logo/logo-cornell.svg" alt="Cornell">
+            <img src="./src/images/logo/logo-caltech.svg" alt="Caltech">
           </div>
-        </figure>
-        <figure class="site-testimonial">
-          <img
-            src="./src/images/icons/icon-quote.webp"
-            alt=""
-            width="40"
-            height="40"
-            class="site-testimonial__quote-icon"
-          />
-          <blockquote class="site-testimonial__quote-container">
-            <p class="site-testimonial__quote">
-              I wasn't getting the slope unit in class, but it finally clicked
-              after 20 minutes talking to Koji!
-            </p>
-          </blockquote>
-          <div class="site-testimonial__person">
-            <img
-              src="src/images/testimonials/tst-eliza.png"
-              alt="Eliza"
-              class="site-testimonial__person-pp"
-              width="100"
-              height="100"
-              loading="lazy"
-            />
-            <div class="site-testimonial__person-detail">
-              <cite class="site-testimonial__person-name">Eliza</cite>
-              <span class="site-testimonial__person-position">7th grader</span>
-            </div>
-          </div>
-        </figure>
-        <figure class="site-testimonial">
-          <img
-            src="./src/images/icons/icon-quote.webp"
-            alt=""
-            width="40"
-            height="40"
-            class="site-testimonial__quote-icon"
-          />
-          <blockquote class="site-testimonial__quote-container">
-            <p class="site-testimonial__quote">
-              I didn't expect him to learn this fast. He explained how to write
-              algorithms at dinner tonight.
-            </p>
-          </blockquote>
-          <div class="site-testimonial__person">
-            <img
-              src="src/images/testimonials/tst-noah.png"
-              alt="Noah"
-              class="site-testimonial__person-pp"
-              width="100"
-              height="100"
-              loading="lazy"
-            />
-            <div class="site-testimonial__person-detail">
-              <cite class="site-testimonial__person-name">Noah</cite>
-              <span class="site-testimonial__person-position"
-                >Parent of 16 year old</span
-              >
-            </div>
-          </div>
-        </figure>
-        <figure class="site-testimonial">
-          <img
-            src="./src/images/icons/icon-quote.webp"
-            alt=""
-            width="40"
-            height="40"
-            class="site-testimonial__quote-icon"
-          />
-          <blockquote class="site-testimonial__quote-container">
-            <p class="site-testimonial__quote">
-              I learned the basics of Trigonometry in 12 days, I just got into a
-              flow. I'm best in my class now.
-            </p>
-          </blockquote>
-          <div class="site-testimonial__person">
-            <img
-              src="src/images/testimonials/tst-tyler.png"
-              alt="Tyler"
-              class="site-testimonial__person-pp"
-              width="100"
-              height="100"
-              loading="lazy"
-            />
-            <div class="site-testimonial__person-detail">
-              <cite class="site-testimonial__person-name">Tyler</cite>
-              <span class="site-testimonial__person-position">10th grader</span>
-            </div>
-          </div>
-        </figure>
-        <figure class="site-testimonial">
-          <img
-            src="./src/images/icons/icon-quote.webp"
-            alt=""
-            width="40"
-            height="40"
-            class="site-testimonial__quote-icon"
-          />
-          <blockquote class="site-testimonial__quote-container">
-            <p class="site-testimonial__quote">
-              She'll get stuck on a problem and then yell, 'Never mind, Mom, I
-              got it!' How great is that?
-            </p>
-          </blockquote>
-          <div class="site-testimonial__person">
-            <img
-              src="src/images/testimonials/tst-arianne.png"
-              alt="Arianne"
-              class="site-testimonial__person-pp"
-              width="100"
-              height="100"
-              loading="lazy"
-            />
-            <div class="site-testimonial__person-detail">
-              <cite class="site-testimonial__person-name">Arianne</cite>
-              <span class="site-testimonial__person-position"
-                >Parent of 10 year old</span
-              >
-            </div>
-          </div>
-        </figure>
+        </div>
 
-        <!-- Figure out how to do this slider -->
-        <div class="site-testimonial__slider"></div>
-      </section>
-    </main>
+        <img alt="experts" src="./src/images/desc-experts-desktop.png" class="site-unique__img" loading="lazy"
+          width="555" height="387">
+      </article>
+    </div>
+    <section class="site-testimonials" aria-labelledby="testimonialsHeading">
+      <h2 class="site-testimonials__heading" id="testimonialsHeading">
+        Students, parents, and teachers love us
+      </h2>
+      <figure class="site-testimonial">
+        <img src="./src/images/icons/icon-quote.webp" alt="" width="40" height="40"
+          class="site-testimonial__quote-icon">
+        <blockquote class="site-testimonial__quote-container">
+          <p class="site-testimonial__quote">
+            They enthusiastically do it outside of calls. I had 8th graders
+            say, 'This makes me want to do more math!'
+          </p>
+        </blockquote>
+        <figcaption class="site-testimonial__person">
+          <img src="src/images/testimonials/tst-aaron.png" alt="Aaron" class="site-testimonial__person-pp" width="100"
+            height="100" loading="lazy">
+          <div class="site-testimonial__person-detail">
+            <b class="site-testimonial__person-name">Aaron</b>
+            <span class="site-testimonial__person-position">Algebra Teacher</span>
+          </div>
+        </figcaption>
+      </figure>
+      <figure class="site-testimonial">
+        <img src="./src/images/icons/icon-quote.webp" alt="" width="40" height="40"
+          class="site-testimonial__quote-icon">
+        <blockquote class="site-testimonial__quote-container">
+          <p class="site-testimonial__quote">
+            I wasn't getting the slope unit in class, but it finally clicked
+            after 20 minutes talking to Koji!
+          </p>
+        </blockquote>
+        <figcaption class="site-testimonial__person">
+          <img src="src/images/testimonials/tst-eliza.png" alt="Eliza" class="site-testimonial__person-pp" width="100"
+            height="100" loading="lazy">
+          <div class="site-testimonial__person-detail">
+            <b class="site-testimonial__person-name">Eliza</b>
+            <span class="site-testimonial__person-position">7th grader</span>
+          </div>
+        </figcaption>
+      </figure>
+      <figure class="site-testimonial">
+        <img src="./src/images/icons/icon-quote.webp" alt="" width="40" height="40"
+          class="site-testimonial__quote-icon">
+        <blockquote class="site-testimonial__quote-container">
+          <p class="site-testimonial__quote">
+            I didn't expect him to learn this fast. He explained how to write
+            algorithms at dinner tonight.
+          </p>
+        </blockquote>
+        <figcaption class="site-testimonial__person">
+          <img src="src/images/testimonials/tst-noah.png" alt="Noah" class="site-testimonial__person-pp" width="100"
+            height="100" loading="lazy">
+          <div class="site-testimonial__person-detail">
+            <b class="site-testimonial__person-name">Noah</b>
+            <span class="site-testimonial__person-position">Parent of 16 year old</span>
+          </div>
+        </figcaption>
+      </figure>
+      <figure class="site-testimonial">
+        <img src="./src/images/icons/icon-quote.webp" alt="" width="40" height="40"
+          class="site-testimonial__quote-icon">
+        <blockquote class="site-testimonial__quote-container">
+          <p class="site-testimonial__quote">
+            I learned the basics of Trigonometry in 12 days, I just got into a
+            flow. I'm best in my class now.
+          </p>
+        </blockquote>
+        <figcaption class="site-testimonial__person">
+          <img src="src/images/testimonials/tst-tyler.png" alt="Tyler" class="site-testimonial__person-pp" width="100"
+            height="100" loading="lazy">
+          <div class="site-testimonial__person-detail">
+            <b class="site-testimonial__person-name">Tyler</b>
+            <span class="site-testimonial__person-position">10th grader</span>
+          </div>
+        </figcaption>
+      </figure>
+      <figure class="site-testimonial">
+        <img src="./src/images/icons/icon-quote.webp" alt="" width="40" height="40"
+          class="site-testimonial__quote-icon">
+        <blockquote class="site-testimonial__quote-container">
+          <p class="site-testimonial__quote">
+            She'll get stuck on a problem and then yell, 'Never mind, Mom, I
+            got it!' How great is that?
+          </p>
+        </blockquote>
+        <div class="site-testimonial__person">
+          <img src="src/images/testimonials/tst-arianne.png" alt="Arianne" class="site-testimonial__person-pp"
+            width="100" height="100" loading="lazy">
+          <figcaption class="site-testimonial__person-detail">
+            <b class="site-testimonial__person-name">Arianne</b>
+            <span class="site-testimonial__person-position">Parent of 10 year old</span>
+          </figcaption>
+        </div>
+      </figure>
 
-    <footer class="site-footer">
-      <section class="site-footer__cta" aria-labelledby="footerCtaHeading">
-        <h2 class="site-footer__cta-heading" id="footerCtaHeading">
-          The best tutor you'll ever have is already here
-        </h2>
-        <button class="site-footer__cta-btn">Get started</button>
-        <div class="site-footer__cta-download-links">
-          <a href="/" class="site-footer__cta--appstore">
-            <img
-              src="./src/images/logo/logo-apple.svg"
-              alt="apple"
-              width="17"
-              height="21"
-              loading="lazy"
-            />
-            <p class="site-footer__cta--appstore-text">
-              Download on the
-              <span class="site-footer__cta--appstore-name">App Store</span>
-            </p>
+      <!-- NOTE: Figure out how to do this slider -->
+      <div class="site-testimonial__slider"></div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <section class="site-footer__cta" aria-labelledby="footerCtaHeading">
+      <h2 class="site-footer__cta-heading" id="footerCtaHeading">
+        The best tutor you'll ever have is already here
+      </h2>
+      <button class="site-footer__cta-btn">Get started</button>
+      <div class="site-footer__cta-download-links">
+        <a href="/" class="site-footer__cta--appstore">
+          <img src="./src/images/logo/logo-apple.svg" width="17" height="21" loading="lazy">
+          <p class="site-footer__cta--appstore-text">
+            Download on the
+            <span class="site-footer__cta--appstore-name">App Store</span>
+          </p>
+        </a>
+        <a href="/" class="site-footer__cta--playstore">
+          <img src="./src/images/logo/logo-playstore.svg" width="17" height="21" loading="lazy">
+          <p class="site-footer__cta--playstore-text">
+            Get it on
+            <span class="site-footer__cta--playstore-name">Google Play</span>
+          </p>
+        </a>
+      </div>
+    </section>
+    <div class="site-footer__links">
+      <img src="./src/images/logo/svg-brilliant-logo.svg" alt="Brilliant.org" width="114" height="27" loading="lazy"
+        class="site-footer__links-logo">
+      <div class="site-footer__links-container">
+        <nav class="site-footer__service-links" aria-label="Footer">
+          <div class="site-footer__product-links">
+            <h4 class="site-footer__product-title">Product</h4>
+            <div class="site-footer__product-links-list">
+              <a href="/">Courses</a>
+              <a href="/">Pricing</a>
+              <a href="/">Gift Brilliant</a>
+              <a href="/">Homeschooling</a>
+              <a href="/">Help</a>
+            </div>
+          </div>
+          <div class="site-footer__company-links">
+            <h4 class="site-footer__company-title">Company</h4>
+            <div class="site-footer__company-links-list">
+              <a href="/">About us</a>
+              <a href="/">Careers</a>
+              <a href="/">Educators</a>
+            </div>
+          </div>
+          <div class="site-footer__bts-links">
+            <h4 class="site-footer__bts-title">Behind the scenes</h4>
+            <div class="site-footer__bts-links-list">
+              <a href="/">A Tutor in Every Home</a>
+              <a href="/">AI at Brilliant</a>
+              <a href="/">AI Eval for Learning Games</a>
+              <a href="/">Visual Algebra</a>
+              <a href="/">Decomposition and Abstraction</a>
+            </div>
+          </div>
+        </nav>
+        <div class="site-footer__socials">
+          <a href="/" class="site-footer__social--facebook">
+            <img src="./src/images/logo/logo-facebook.svg" alt="Facebook" width="22" height="22" loading="lazy">
           </a>
-          <a href="/" class="site-footer__cta--playstore">
-            <img
-              src="./src/images/logo/logo-playstore.svg"
-              alt="playstore"
-              width="17"
-              height="21"
-              loading="lazy"
-            />
-            <p class="site-footer__cta--playstore-text">
-              Get it on
-              <span class="site-footer__cta--playstore-name">Google Play</span>
-            </p>
+          <a href="/" class="site-footer__social--ig">
+            <img src="./src/images/logo/logo-ig.svg" alt="Instagram" width="22" height="22" loading="lazy">
+          </a>
+          <a href="/" class="site-footer__social--x">
+            <img src="./src/images/logo/logo-x.svg" alt="Twitter (X)" width="22" height="22" loading="lazy">
+          </a>
+          <a href="/" class="site-footer__social--linkedin">
+            <img src="./src/images/logo/logo-linkedin.svg" alt="LinkedIn" width="22" height="22" loading="lazy">
           </a>
         </div>
-      </section>
-      <div class="site-footer__links">
-        <img
-          src="./src/images/logo/svg-brilliant-logo.svg"
-          alt="Brilliant.org"
-          width="114"
-          height="27"
-          loading="lazy"
-          class="site-footer__links-logo"
-        />
-        <div class="site-footer__links-container">
-          <div class="site-footer__service-links">
-            <div class="site-footer__product-links">
-              <p class="site-footer__product-title">Product</p>
-              <div class="site-footer__product-links-list">
-                <a href="/">Courses</a>
-                <a href="/">Pricing</a>
-                <a href="/">Gift Brilliant</a>
-                <a href="/">Homeschooling</a>
-                <a href="/">Help</a>
-              </div>
-            </div>
-            <div class="site-footer__company-links">
-              <p class="site-footer__company-title">Company</p>
-              <div class="site-footer__company-links-list">
-                <a href="/">About us</a>
-                <a href="/">Careers</a>
-                <a href="/">Educators</a>
-              </div>
-            </div>
-            <div class="site-footer__bts-links">
-              <p class="site-footer__bts-title">Behind the scenes</p>
-              <div class="site-footer__bts-links-list">
-                <a href="/">A Tutor in Every Home</a>
-                <a href="/">AI at Brilliant</a>
-                <a href="/">AI Evals for Learning Games</a>
-                <a href="/">Visual Algebra</a>
-                <a href="/">Decomposition and Abstraction</a>
-              </div>
-            </div>
-          </div>
-          <div class="site-footer__socials">
-            <a href="/" class="site-footer__social--facebook">
-              <img
-                src="./src/images/logo/logo-facebook.svg"
-                alt="Facebook"
-                width="22"
-                height="22"
-                loading="lazy"
-              />
-            </a>
-            <a href="/" class="site-footer__social--ig">
-              <img
-                src="./src/images/logo/logo-ig.svg"
-                alt="Instagram"
-                width="22"
-                height="22"
-                loading="lazy"
-              />
-            </a>
-            <a href="/" class="site-footer__social--x">
-              <img
-                src="./src/images/logo/logo-x.svg"
-                alt="X"
-                width="22"
-                height="22"
-                loading="lazy"
-              />
-            </a>
-            <a href="/" class="site-footer__social--linkedin">
-              <img
-                src="./src/images/logo/logo-linkedin.svg"
-                alt="LinkedIn"
-                width="22"
-                height="22"
-                loading="lazy"
-              />
-            </a>
-          </div>
-        </div>
       </div>
-      <div class="site-footer__readmes">
-        <div class="site-footer__readmes-container">
-          <a href="/">Terms of service</a>
-          <a href="/">PRIVACY POLICY</a>
-          <a href="/">Do not sell my personal information</a>
-          <a href="/">California privacy policy</a>
-        </div>
-        <!-- Add a way to change the year automatically. -->
-        <p class="site-footer__copyright">
-          &copy; 2026 Brilliant Worldwide, Inc., Brilliant and the Brilliant
-          Logo are trademarks of Brilliant Worldwide, Inc.
-        </p>
+    </div>
+    <div class="site-footer__readmes">
+      <div class="site-footer__readmes-container">
+        <a href="/">Terms of service</a>
+        <a href="/">Privacy policy</a>
+        <a href="/">Do not sell my personal information</a>
+        <a href="/">California privacy policy</a>
       </div>
-    </footer>
+      <!-- TODO: Add a way to change the year automatically. -->
+      <p class="site-footer__copyright">
+        &copy; 2026 Brilliant Worldwide, Inc., Brilliant and the Brilliant
+        Logo are trademarks of Brilliant Worldwide, Inc.
+      </p>
+    </div>
+  </footer>
 
-    <script type="module" src="./src/scripts/app.js"></script>
-  </body>
+  <script type="module" src="./src/scripts/app.js"></script>
+</body>
+
 </html>
