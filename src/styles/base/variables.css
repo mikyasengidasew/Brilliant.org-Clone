@@ -1,0 +1,78 @@
+:root {
+  /* PRIMITIVE TOKENS */
+  --c-white: rgb(255, 255, 255);
+  --c-gray-50: rgb(243, 243, 243);
+  --c-gray-100: rgb(231, 231, 231);
+  --c-gray-200: rgb(229, 229, 229);
+  --c-gray-300: rgb(178, 178, 178);
+  --c-gray-400: rgb(166, 166, 166);
+  --c-gray-500: rgb(153, 153, 153);
+  --c-gray-600: rgb(146, 146, 146);
+  --c-gray-700: rgb(131, 131, 131);
+  --c-gray-800: rgb(102, 102, 102);
+  --c-gray-900: rgb(98, 97, 96);
+  --c-gray-950: rgb(42, 42, 45);
+  --c-black: rgb(0, 0, 0);
+  --c-pink: rgb(243, 25, 159);
+  --c-blue: rgb(24, 119, 242);
+  --c-blue-100: rgb(69, 109, 255);
+  --c-green: rgb(41, 204, 87);
+  --c-green-100: rgb(21, 180, 65);
+
+  --shadow-sm: rgba(0, 0, 0, 0.05) 0px 4px 14px 0px;
+
+  /* SEMANTIC TOKENS */
+  --c-surface: var(--c-white);
+  --c-border: var(--c-gray-200);
+  --c-border-hover: var(--c-gray-300);
+
+  --c-text-primary: var(--c-black);
+  --c-text-secondary: var(--c-gray-600);
+  --c-text-tertiary: var(--c-gray-800);
+
+  --c-footer-primary: var(--c-gray-500);
+  --c-footer-secondary: var(--c-white);
+
+  --c-surface-footer: var(--c-black);
+  --c-surface-hero: var(--c-gray-50);
+
+  --c-logos-feature: var(--c-gray-300);
+
+  /* COMPONENT TOKENS */
+  --btn-border-footer: var(--c-gray-400);
+
+  --btn-bg-primary: var(--c-green);
+  --btn-bg-primary-hover: var(--c-green-100);
+  --btn-text-primary: var(--c-white);
+
+  --btn-bg-secondary: var(--c-white);
+  --btn-bg-secondary-hover: rgb(220, 218, 216);
+
+  --btn-text-secondary: var(--c-gray-600);
+  --btn-text-secondary-hover: var(--c-gray-700);
+
+  --btn-bg-tertiary: var(--c-black);
+  --btn-text-tertiary: var(--c-white);
+
+  --btn-bg-quaternary: var(--c-gray-50);
+  --btn-text-quaternary: var(--c-black);
+  --btn-text-quaternary-hover: var(--c-gray-950);
+
+  --link-text-box: var(--c-gray-700);
+
+  --box-surface: var(--c-gray-50);
+  --box-surface-inner: var(--c-gray-100);
+
+  --quote-icon-primary: var(--c-gray-800);
+  --quote-text: var(--c-gray-900);
+
+  --quoter-name-text: var(--c-black);
+  --quoter-position-text: var(--c-gray-600);
+
+  --social-ig-hover: var(--c-pink);
+  --social-x-hover: var(--c-gray-200);
+  --social-fb-hover: var(--c-blue);
+  --social-linkedin-hover: var(--c-blue-100);
+
+  --link-footer-hover: var(--c-blue-100);
+}
