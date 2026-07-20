@@ -162,9 +162,6 @@
   --btn-text-quaternary: var(--color-black);
   --btn-text-quaternary-hover: var(--color-gray-1000);
 
-  --btn-bg-footer: var(--color-white);
-  --btn-text-footer: var(--color-black);
-
   --btn-shadow: var(--shadow-btn);
   --btn-radius: var(--radii-full);
 
