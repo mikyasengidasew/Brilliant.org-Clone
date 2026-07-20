@@ -69,11 +69,15 @@
     </a>
 
     <nav class="site-navigation" aria-label="Main">
-      <button class="site-navigation__btn site-navigation__btn--primary site-navigation__signin">
-        Sign in
+      <button class="site-navigation__btn site-navigation__signin">
+        <span class="btn-content site-navigation__btn-content">
+          Sign in
+        </span>
       </button>
-      <button class="site-navigation__btn site-navigation__btn--secondary site-navigation__start">
-        Get started
+      <button class="site-navigation__btn site-navigation__start">
+        <span class="btn-content site-navigation__btn-content">
+          Get started
+        </span>
       </button>
     </nav>
   </header>
@@ -91,8 +95,16 @@
           </p>
         </div>
         <div class="site-hero__cta">
-          <a href="./src/pages/welcome.html" class="site-hero__login--student">I'm a learner</a>
-          <a href="./src/pages/welcome.html" class="site-hero__login--teacher">I'm a parent or teacher</a>
+          <button type="button" class="site-hero__btn--student site-hero__btn">
+            <span class="btn-content site-hero__btn-content">
+              I'm a learner
+            </span>
+          </button>
+          <button type="button" class="site-hero__btn--teacher site-hero__btn">
+            <span class="btn-content site-hero__btn-content">
+              I'm a parent or teacher
+            </span>
+          </button>
         </div>
       </div>
       <div class="site-hero__visual">
@@ -205,13 +217,19 @@
         From grade 5 to college and beyond
       </h2>
       <div class="site-courses__scroll-btns" role="tablist">
-        <button class="site-courses__btn--math" id="courseMathBtn" role="tab" aria-pressed="false">Math</button>
-        <button class="site-courses__btn--cs" id="courseCsBtn" role="tab" aria-pressed="false">Computer
-          Science</button>
-        <button class="site-courses__btn--science" id="courseScienceBtn" role="tab"
-          aria-pressed="false">Science</button>
-        <button class="site-courses__btn--data" id="courseDataBtn" role="tab" aria-pressed="false">Data
-          Analysis</button>
+        <button class="site-courses__btn--math site-courses__btn active" id="courseMathBtn" role="tab"
+          aria-pressed="false">
+          <span class="btn-content site-courses__btn-content">Math</span>
+        </button>
+        <button class="site-courses__btn--cs site-courses__btn" id="courseCsBtn" role="tab" aria-pressed="false">
+          <span class="btn-content site-courses__btn-content">Computer science</span>
+        </button>
+        <button class="site-courses__btn--science site-courses__btn" id="courseScienceBtn" role="tab"
+          aria-pressed="false"> <span class="btn-content site-courses__btn-content">Science</span>
+        </button>
+        <button class="site-courses__btn--data site-courses__btn" id="courseDataBtn" role="tab" aria-pressed="false">
+          <span class="btn-content site-courses__btn-content">Data Analysis</span>
+        </button>
       </div>
       <div class="site-courses__list">
         <div class="site-courses__math">
@@ -465,21 +483,15 @@
       <h2 class="site-footer__cta-heading" id="footerCtaHeading">
         The best tutor you'll ever have is already here
       </h2>
-      <button class="site-footer__cta-btn">Get started</button>
+      <button class="site-footer__btn">
+        <span class="btn-content site-footer__btn-content">Get started</span>
+      </button>
       <div class="site-footer__cta-download-links">
         <a href="/" class="site-footer__cta--appstore">
-          <img src="./src/images/logo/logo-apple.svg" width="17" height="21" loading="lazy">
-          <p class="site-footer__cta--appstore-text">
-            Download on the
-            <span class="site-footer__cta--appstore-name">App Store</span>
-          </p>
+          <img src="./src/images/logo/logo-apple.svg" width="132" height="44" loading="lazy">
         </a>
         <a href="/" class="site-footer__cta--playstore">
-          <img src="./src/images/logo/logo-playstore.svg" width="17" height="21" loading="lazy">
-          <p class="site-footer__cta--playstore-text">
-            Get it on
-            <span class="site-footer__cta--playstore-name">Google Play</span>
-          </p>
+          <img src="./src/images/logo/logo-playstore.svg" width="148" height="44" loading="lazy">
         </a>
       </div>
     </section>
