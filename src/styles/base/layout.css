@@ -1,0 +1,9 @@
+.site-footer__cta-download-links {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+}
+
+.site-footer__socials {
+  display: flex;
+}

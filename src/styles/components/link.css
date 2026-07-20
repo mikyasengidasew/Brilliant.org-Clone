@@ -1,0 +1,27 @@
+.site-footer__cta-links:focus-visible {
+  outline: 3px solid var(--btn-outline-primary);
+  border-radius: var(--radii-3);
+}
+
+.site-footer__service-links a:hover,
+.site-footer__readmes a:hover {
+  text-decoration: 2px underline var(--link-footer-hover);
+  text-decoration-skip-ink: none;
+  text-underline-offset: var(--space-1);
+}
+
+.site-footer__social--facebook:hover svg path {
+  fill: var(--social-fb-hover);
+}
+
+.site-footer__social--ig:hover svg path {
+  fill: var(--social-ig-hover);
+}
+
+.site-footer__social--x:hover svg path {
+  fill: var(--social-x-hover);
+}
+
+.site-footer__social--linkedin:hover svg path {
+  fill: var(--social-linkedin-hover);
+}

@@ -3,6 +3,7 @@
 @import url("variables.css");
 @import url("reset.css");
 @import url("../components/button.css");
+@import url("../components/link.css");
 
 body {
   font-family: "Inter";
