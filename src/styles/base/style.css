@@ -4,6 +4,7 @@
 @import url("reset.css");
 @import url("../components/button.css");
 @import url("../components/link.css");
+@import url("../components/card.css");
 
 body {
   font-family: "Inter";
