@@ -1,0 +1,75 @@
+button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.site-navigation__btn {
+  padding: var(--space-2) calc(var(--space-3) + calc(2 / 16 * 1rem));
+  font-size: 1rem;
+  font-weight: 600;
+  border-radius: calc(var(--radii-13) + calc(2 / 16 * 1rem));
+}
+
+.site-navigation__signin {
+  border: 2px solid;
+  border-color: var(--color-border);
+}
+
+.site-navigation__signin:hover {
+  border-color: var(--color-border-hover);
+}
+
+.site-navigation__start {
+  background-color: var(--btn-bg-tertiary);
+  color: var(--btn-text-tertiary);
+}
+
+.site-navigation__start:hover {
+  opacity: 0.78;
+}
+
+.site-hero__btn,
+.site-footer__btn {
+  padding: var(--space-3) calc(var(--space-6) - calc(2 / 16 * 1rem));
+  font-weight: 500;
+  box-shadow: var(--shadow-base);
+  border-radius: var(--radii-full);
+}
+
+.site-hero__btn {
+  font-size: calc(18 / 16 * 1rem);
+}
+
+.site-footer__btn {
+  font-size: calc(20 / 16 * 1rem);
+  background: var(--btn-bg-footer);
+  color: var(--btn-text-footer);
+}
+
+.site-footer__btn:hover {
+  opacity: 0.78;
+}
+
+.site-hero__btn--student {
+  background-color: var(--btn-bg-primary);
+  color: var(--btn-text-primary);
+}
+
+.site-hero__btn--student:hover {
+  background-color: var(--btn-bg-primary-hover);
+}
+
+.site-hero__btn--teacher {
+  background-color: var(--btn-bg-secondary);
+  color: var(--btn-text-secondary);
+}
+
+.site-hero__btn--teacher:hover {
+  background-color: var(--btn-bg-secondary-hover);
+  color: var(--btn-text-secondary-hover);
+}
+
+.site-footer {
+  background-color: black;
+}
