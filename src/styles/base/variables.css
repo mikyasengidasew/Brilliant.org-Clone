@@ -201,4 +201,6 @@
   --social-linkedin-hover: var(--color-blue-100);
 
   --link-footer-hover: var(--color-blue-100);
+
+  --fade-out: 15%;
 }
