@@ -119,6 +119,12 @@
   --font-12: 3rem;
   --font-14: 3.5rem;
 
+  --font-adjust: calc(2 / 16 * 1rem);
+  --font-adjust-secondary: calc(1 / 16 * 1rem);
+
+  --font-fam-base: "Inter";
+  --font-fam-second: "Noto Serif";
+
   /* SEMANTIC TOKENS */
   --color-surface: var(--color-white);
   --color-border: var(--color-gray-200);

@@ -160,7 +160,7 @@
       <article class="site-features__card site-features__left">
         <video class="site-features__video" width="555" height="387"
           title="Animation showing a concept clicking into place" muted autoplay loop playsinline>
-          <source src="src/videos/concepts-click-desktop.webm">
+          <source src="src/videos/concepts-click-mobile.webm">
         </video>
         <div class="site-features__desc">
           <h3 class="site-features__title">Concepts that click</h3>
@@ -172,6 +172,10 @@
         </div>
       </article>
       <article class="site-features__card site-features__right">
+        <video class="site-features__video" width="555" height="387" title="Animation showing how Koji make you think"
+          muted autoplay loop playsinline>
+          <source src="src/videos/built-to-think-mobile.webm">
+        </video>
         <div class="site-features__desc">
           <h3 class="site-features__title">Built to make you think</h3>
           <p class="site-features__text">
@@ -181,15 +185,11 @@
             actually understanding it.
           </p>
         </div>
-        <video class="site-features__video" width="555" height="387" title="Animation showing how Koji make you think"
-          muted autoplay loop playsinline>
-          <source src="src/videos/built-to-think-desktop.webm">
-        </video>
       </article>
       <article class="site-features__card site-features__left">
         <video class="site-features__video" width="555" height="387" title="Animation showing how adaptive brilliant is"
           muted autoplay loop playsinline>
-          <source src="src/videos/adapts-desktop.webm">
+          <source src="src/videos/adapts-mobile.webm">
         </video>
         <div class="site-features__desc">
           <h3 class="site-features__title">
@@ -203,6 +203,10 @@
         </div>
       </article>
       <article class="site-features__card site-features__right">
+        <video class="site-features__video" width="555" height="387"
+          title="Animation showing the app design to keep you learning" muted autoplay loop playsinline>
+          <source src="src/videos/keep-learning-mobile.webm">
+        </video>
         <div class="site-features__desc">
           <h3 class="site-features__title">Designed to keep you learning</h3>
           <p class="site-features__text">
@@ -211,10 +215,6 @@
             progress and keep moving forward.
           </p>
         </div>
-        <video class="site-features__video" width="555" height="387"
-          title="Animation showing the app design to keep you learning" muted autoplay loop playsinline>
-          <source src="src/videos/keep-learning-desktop.webm">
-        </video>
       </article>
     </section>
     <section class="site-courses" aria-labelledby="coursesHeading">
@@ -346,8 +346,8 @@
     </section>
     <div class="site-unique">
       <article class="site-unique__card site-unique__left" aria-labelledby="uniqueScheduleHeading">
-        <img alt="schedule" src="./src/images/desc-schedule-desktop.png" class="site-unique__img" loading="lazy"
-          width="555" height="387">
+        <img alt="schedule" src="./src/images/desc-schedule-mobile.png" class="site-unique__img" loading="lazy"
+          width="319" height="218">
         <div class="site-unique__desc">
           <h3 class="site-unique__title" id="uniqueScheduleHeading">
             Always on your schedule
@@ -362,6 +362,8 @@
       </article>
       <article class="site-unique__card site-unique__right" aria-labelledby="uniqueExpertHeading">
         <div class="site-unique__desc">
+          <img alt="experts" src="./src/images/desc-experts-mobile.png" class="site-unique__img" loading="lazy"
+            width="555" height="387">
           <h3 class="site-unique__title" id="uniqueExpertHeading">
             Built by top learning experts
           </h3>
@@ -378,9 +380,6 @@
             <img src="./src/images/logo/logo-caltech.svg" alt="Caltech">
           </div>
         </div>
-
-        <img alt="experts" src="./src/images/desc-experts-desktop.png" class="site-unique__img" loading="lazy"
-          width="555" height="387">
       </article>
     </div>
     <section class="site-testimonials" aria-labelledby="testimonialsHeading">
@@ -508,8 +507,8 @@
       <div class="site-footer__links-container">
         <nav class="site-footer__service-links" aria-label="Footer">
           <div class="site-footer__product-links">
-            <h4 class="site-footer__product-title">Product</h4>
-            <div class="site-footer__product-links-list">
+            <h4 class="site-footer__title">Product</h4>
+            <div class="site-footer__links-list">
               <a href="/">Courses</a>
               <a href="/">Pricing</a>
               <a href="/">Gift Brilliant</a>
@@ -518,16 +517,16 @@
             </div>
           </div>
           <div class="site-footer__company-links">
-            <h4 class="site-footer__company-title">Company</h4>
-            <div class="site-footer__company-links-list">
+            <h4 class="site-footer__title">Company</h4>
+            <div class="site-footer__links-list">
               <a href="/">About us</a>
               <a href="/">Careers</a>
               <a href="/">Educators</a>
             </div>
           </div>
           <div class="site-footer__bts-links">
-            <h4 class="site-footer__bts-title">Behind the scenes</h4>
-            <div class="site-footer__bts-links-list">
+            <h4 class="site-footer__title">Behind the scenes</h4>
+            <div class="site-footer__links-list">
               <a href="/">A Tutor in Every Home</a>
               <a href="/">AI at Brilliant</a>
               <a href="/">AI Eval for Learning Games</a>
@@ -575,7 +574,7 @@
     <div class="site-footer__readmes">
       <div class="site-footer__readmes-container">
         <a href="/">Terms of service</a>
-        <a href="/">Privacy policy</a>
+        <a class="site-footer__uppercase" href="/">Privacy policy</a>
         <a href="/">Do not sell my personal information</a>
         <a href="/">California privacy policy</a>
       </div>

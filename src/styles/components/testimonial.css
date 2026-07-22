@@ -38,8 +38,10 @@
 }
 
 .site-testimonial__quote {
-  font-size: var(--font-5);
+  font-size: calc(var(--font-5) - calc(1 / 16 * 1rem));
   color: var(--quote-text);
+  width: 16ch;
+  line-height: var(--lineHeights-normal);
 }
 
 .site-testimonial__person {
